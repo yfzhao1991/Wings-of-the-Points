@@ -359,6 +359,7 @@
   var amexColor = '#2E7D32';
   var chaseColor = '#1565C0';
   var citiColor = '#FDD835';
+  var biltColor = '#552583';
   var noneColor = '#BDBDBD';
 
   var rates = {
@@ -443,6 +444,21 @@
       'ba': "1:1",
       'tp': "1:1",
     },
+    "bilt": {
+      'aa': "1:1",
+      'ac': "1:1",
+      'af': "1:1",
+      'av': "1:1",
+      'ba': "1:1",
+      'cx': "1:1",
+      'ei': "1:1",
+      'ek': "1:1",
+      'ha': "1:1",
+      'ib': "1:1",
+      'tk': "1:1",
+      'ua': "1:1",
+      'vs': "1:1",
+    },
     "marriott": {
       'a3': "3:1.25",
       'su': "3:1.25",
@@ -505,6 +521,7 @@
     if (node.sc === 'amex') { return amexColor; }
     if (node.sc === 'chase') { return chaseColor; }
     if (node.sc === 'citi') { return citiColor; }
+    if (node.sc === 'bilt') { return biltColor; }
   })
   .colorLinks(function(link) {
     if ([link.source.sc, link.target.sc].indexOf('c1') >= 0) { return c1Color; }
@@ -512,6 +529,7 @@
     if ([link.source.sc, link.target.sc].indexOf('chase') >= 0) { return chaseColor; }
     if ([link.source.sc, link.target.sc].indexOf('citi') >= 0) { return citiColor; }
     if ([link.source.sc, link.target.sc].indexOf('amex') >= 0) { return amexColor; }
+    if ([link.source.sc, link.target.sc].indexOf('bilt') >= 0) { return biltColor; }
     if ([link.source.sc, link.target.sc].indexOf('none') >= 0) { return noneColor; }
   })
   .on("link:mouseover", (link) => {
@@ -519,7 +537,7 @@
     target = link.target,
     source = link.source;
 
-    if (source.sc === "citi" || source.sc === "amex" || source.sc === "chase" || source.sc === "marriott" || source.sc === "c1" || source.sc === "none") {
+    if (source.sc === "citi" || source.sc === "amex" || source.sc === "chase" || source.sc === "marriott" || source.sc === "c1" ||source.sc === "bilt" || source.sc === "none") {
       [target, source] = [source, target];
     }
     rate = rates[target.sc] ? (rates[target.sc][source.sc] || "?:?") : "?:?";
