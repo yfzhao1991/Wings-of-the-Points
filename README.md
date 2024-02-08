@@ -2,7 +2,7 @@
 
 This is a chart to visually represent the transfer partnerships between rewards programs of US credit cards and airlines.
 
-Live Demo -> [https://uscreditcardguide.github.io/Wings-of-the-Points/index.html](https://uscreditcardguide.github.io/Wings-of-the-Points/index.html)
+Live Demo -> [test](https://yfzhao1991.github.io/Wings-of-the-Points/index.html)
 
 
 ## Usage
@@ -19,6 +19,9 @@ Live Demo -> [https://uscreditcardguide.github.io/Wings-of-the-Points/index.html
 * Apart from Lufthansa (LH), Miles & More is also the frequent flyer program for Adria Airways (JP), Austrian Airlines (OS), Brussels Airlines (SN), Croatia Airlines (OU), LOT Polish Airlines (LO), and SWISS (LX). These airlines are not shown in the chart due to limited space.
 
 ## Change Log
+
+### 2024-02-07
+* Bilt
 
 ### 2023-07-28
 * QR is now a transfer partner of AmEx MR at ratio 1:1.
